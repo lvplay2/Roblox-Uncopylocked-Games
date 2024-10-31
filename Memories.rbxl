@@ -1,0 +1,1498 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">RBX2</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>-353.723358</X>
+					<Y>293.017609</Y>
+					<Z>6.95736456</Z>
+					<R00>-0.00461763376</R00>
+					<R01>0.00238034641</R01>
+					<R02>-0.999986529</R02>
+					<R10>-9.09494702e-013</R10>
+					<R11>0.999997258</R11>
+					<R12>0.00238037156</R12>
+					<R20>0.99998939</R20>
+					<R21>1.09916846e-005</R21>
+					<R22>-0.00461762073</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-333.723633</X>
+					<Y>292.970001</Y>
+					<Z>7.04971695</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+			</Properties>
+		</Item>
+		<Item class="Terrain" referent="RBX3">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>-2</X>
+					<Y>126</Y>
+					<Z>-2</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<string name="ClusterGridV2"></string>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Terrain</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Vector3 name="size">
+					<X>2044</X>
+					<Y>252</Y>
+					<Z>2044</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX4">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">JoinScript</string>
+				<ProtectedString name="Source">--local debug = game.Workspace.Debug
+
+--debug.Value = &quot;Started join script&quot;
+
+-- basic functions
+function waitForChild(instance, name)
+&#9;while not instance:findFirstChild(name) do
+&#9;&#9;instance.ChildAdded:wait()
+&#9;end
+end
+function waitForProperty(instance, name)
+&#9;while not instance[name] do
+&#9;&#9;instance.Changed:wait()
+&#9;end
+end
+function waitForPropertyTimed(instance, name, timeout)
+&#9;local counter = 0
+&#9;while instance[name]==false and counter &lt; timeout do
+&#9;&#9;wait(1)
+&#9;&#9;counter = counter + 1
+&#9;end
+end
+
+--debug.Value = &quot;Loaded waiting functions&quot;
+
+function isOwner(newPlayer)
+&#9;if not newPlayer or not newPlayer.Parent then return false end -- gotta be a playa to get here
+
+&#9;if newPlayer.userId &lt; 0 then return false end -- guests can&apos;t be place owners
+
+&#9;return (newPlayer.userId == game.CreatorId)
+end
+
+--debug.Value = &quot;Loaded isOwner function&quot;
+
+function firstTimeHere(newPlayer)
+&#9;--Wait for persistent data to be loaded (or to fail)
+&#9;waitForPropertyTimed(newPlayer,&quot;DataReady&quot;,10)
+&#9;
+&#9;-- Need to warn player here that persistance isn&apos;t working!
+&#9;if newPlayer.DataReady == false then return false end -- only overwrite level if DP is working!
+
+&#9;local savedData = nil
+&#9;local success = pcall(function() savedData = newPlayer:LoadInstance(&quot;PlaceData&quot;) end)
+
+&#9;if not success or not savedData or savedData.Name ~= &quot;SavedModel&quot; then
+&#9;&#9;-- we didn&apos;t have data, so must be the first time coming here
+&#9;&#9;local modelToSave = Instance.new(&quot;Model&quot;)
+&#9;&#9;modelToSave.Name = &quot;SavedModel&quot;
+&#9;&#9;local success, error = pcall(function() newPlayer:SaveInstance(&quot;PlaceData&quot;, modelToSave) end)
+&#9;&#9;return success  -- if we successfully saved them as no longer being a first-time user, then we are good to generate the place for realz
+&#9;else
+&#9;&#9;return false
+&#9;end
+end
+
+--debug.Value = &quot;Loaded firstTimeHere function&quot;
+
+-- call level generator script
+function makeNewLevel(newPlayer)
+&#9;local newLevelGenScript = game.Workspace.LevelGenerator:Clone()
+&#9;newLevelGenScript.Parent = newPlayer.Backpack
+&#9;newLevelGenScript.Disabled = false
+end
+
+function makeResetButton(newPlayer)
+&#9;local newResetButtonScript = game.Workspace.ResetButtonScript:Clone()
+&#9;newResetButtonScript.Parent = newPlayer.Backpack
+&#9;newResetButtonScript.Disabled = false
+end
+
+function testForInit(newPlayer)
+&#9;--debug.Value = &quot;Tested a player for init&quot;
+&#9;if isOwner(newPlayer) then
+&#9;&#9;if firstTimeHere(newPlayer) then
+&#9;&#9;&#9;--debug.Value = &quot;Calling the level generator&quot;
+&#9;&#9;&#9;makeNewLevel(newPlayer)
+&#9;&#9;else 
+&#9;&#9;&#9;makeResetButton(newPlayer) 
+&#9;&#9;end
+&#9;&#9;newPlayer.CharacterAdded:connect(function () makeResetButton(newPlayer) end)
+&#9;end
+end
+
+--debug.Value = &quot;Loaded all functions&quot;
+
+-- any newly added player must be tested
+game.Players.PlayerAdded:connect(testForInit)
+
+-- also test any players who got here before the script was initialized
+local playaz = game.Players:GetPlayers()
+for i = 1, #playaz do
+&#9;testForInit(playaz[i])
+end
+
+--debug.Value = &quot;Finished loading join script&quot;
+
+</ProtectedString>
+			</Properties>
+		</Item>
+		<Item class="SpawnLocation" referent="RBX5">
+			<Properties>
+				<bool name="AllowTeamChangeOnTouch">false</bool>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>260.200012</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<int name="Duration">10</int>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">256</token>
+				<string name="Name">InitialSpawnLocation</string>
+				<bool name="Neutral">true</bool>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<int name="TeamColor">194</int>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">1</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>16</X>
+					<Y>1.20000005</Y>
+					<Z>16</Z>
+				</Vector3>
+			</Properties>
+			<Item class="ManualWeld" referent="RBX6">
+				<Properties>
+					<CoordinateFrame name="C0">
+						<X>8</X>
+						<Y>-0.600000024</Y>
+						<Z>8</Z>
+						<R00>-0</R00>
+						<R01>0</R01>
+						<R02>1</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>-1</R20>
+						<R21>0</R21>
+						<R22>-0</R22>
+					</CoordinateFrame>
+					<CoordinateFrame name="C1">
+						<X>7.96190739</X>
+						<Y>-0.724998474</Y>
+						<Z>-8.04556274</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<string name="Name">InitialSpawnLocation-to-InitialSpawnWall Strong Joint</string>
+					<Ref name="Part0">RBX5</Ref>
+					<Ref name="Part1">RBX7</Ref>
+					<int name="Surface0">0</int>
+					<int name="Surface1">4</int>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX8">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-0.693179131</X>
+						<Y>267.600037</Y>
+						<Z>8.58177662</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">InitialSpawnWall</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0.800000012</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">3</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>17.3999863</X>
+						<Y>1.21000028</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX9">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-8.69822121</X>
+						<Y>267.600006</Y>
+						<Z>-0.0118136406</Z>
+						<R00>0</R00>
+						<R01>1</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>1</R20>
+						<R21>0</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">InitialSpawnWall</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0.800000012</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">3</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>15.9900026</X>
+						<Y>1.44999993</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+				<Item class="ManualWeld" referent="RBX10">
+					<Properties>
+						<CoordinateFrame name="C0">
+							<X>7.99500132</X>
+							<Y>-0.724999964</Y>
+							<Z>8</Z>
+							<R00>-0</R00>
+							<R01>0</R01>
+							<R02>0.99999994</R02>
+							<R10>0</R10>
+							<R11>1</R11>
+							<R12>0</R12>
+							<R20>-0.99999994</R20>
+							<R21>0</R21>
+							<R22>-0</R22>
+						</CoordinateFrame>
+						<CoordinateFrame name="C1">
+							<X>8.73004246</X>
+							<Y>-0.598588943</Y>
+							<Z>7.99996948</Z>
+							<R00>0</R00>
+							<R01>-1</R01>
+							<R02>0</R02>
+							<R10>0</R10>
+							<R11>0</R11>
+							<R12>0.99999994</R12>
+							<R20>-0.99999994</R20>
+							<R21>0</R21>
+							<R22>0</R22>
+						</CoordinateFrame>
+						<string name="Name">InitialSpawnWall-to-InitialSpawnWall Strong Joint</string>
+						<Ref name="Part0">RBX9</Ref>
+						<Ref name="Part1">RBX8</Ref>
+						<int name="Surface0">0</int>
+						<int name="Surface1">4</int>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX7">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>8.72499847</X>
+						<Y>267.645569</Y>
+						<Z>0.0380923748</Z>
+						<R00>0</R00>
+						<R01>1</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>1</R20>
+						<R21>0</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">InitialSpawnWall</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0.800000012</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">3</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>18.2400341</X>
+						<Y>1.44999993</Y>
+						<Z>16.1200027</Z>
+					</Vector3>
+				</Properties>
+				<Item class="ManualWeld" referent="RBX11">
+					<Properties>
+						<CoordinateFrame name="C0">
+							<X>9.12001705</X>
+							<Y>-0.724999964</Y>
+							<Z>8.06000137</Z>
+							<R00>1</R00>
+							<R01>0</R01>
+							<R02>0</R02>
+							<R10>0</R10>
+							<R11>0</R11>
+							<R12>-1</R12>
+							<R20>-0</R20>
+							<R21>1</R21>
+							<R22>0</R22>
+						</CoordinateFrame>
+						<CoordinateFrame name="C1">
+							<X>-8.67001152</X>
+							<Y>17.7631111</Y>
+							<Z>7.90567017</Z>
+							<R00>0</R00>
+							<R01>0</R01>
+							<R02>1</R02>
+							<R10>1</R10>
+							<R11>0</R11>
+							<R12>0</R12>
+							<R20>0</R20>
+							<R21>1</R21>
+							<R22>0</R22>
+						</CoordinateFrame>
+						<string name="Name">InitialSpawnWall-to-InitialSpawnWall Strong Joint</string>
+						<Ref name="Part0">RBX7</Ref>
+						<Ref name="Part1">RBX12</Ref>
+						<int name="Surface0">4</int>
+						<int name="Surface1">3</int>
+					</Properties>
+				</Item>
+				<Item class="ManualWeld" referent="RBX13">
+					<Properties>
+						<CoordinateFrame name="C0">
+							<X>9.12001705</X>
+							<Y>-0.724999964</Y>
+							<Z>8.06000137</Z>
+							<R00>1</R00>
+							<R01>0</R01>
+							<R02>0</R02>
+							<R10>0</R10>
+							<R11>0</R11>
+							<R12>-1</R12>
+							<R20>-0</R20>
+							<R21>1</R21>
+							<R22>0</R22>
+						</CoordinateFrame>
+						<CoordinateFrame name="C1">
+							<X>-8.69317818</X>
+							<Y>0.576333046</Y>
+							<Z>8.10552979</Z>
+							<R00>0</R00>
+							<R01>0</R01>
+							<R02>1</R02>
+							<R10>1</R10>
+							<R11>0</R11>
+							<R12>0</R12>
+							<R20>0</R20>
+							<R21>1</R21>
+							<R22>0</R22>
+						</CoordinateFrame>
+						<string name="Name">InitialSpawnWall-to-InitialSpawnWall Strong Joint</string>
+						<Ref name="Part0">RBX7</Ref>
+						<Ref name="Part1">RBX8</Ref>
+						<int name="Surface0">4</int>
+						<int name="Surface1">3</int>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX12">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-0.670013428</X>
+						<Y>267.799896</Y>
+						<Z>-8.6050024</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">InitialSpawnWall</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0.800000012</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">3</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>17.3400269</X>
+						<Y>1.1900003</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX2">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-312.730011</X>
+						<Y>292.735107</Y>
+						<Z>7.03499413</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">false</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">InitialScreenshotPart</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">1</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">3</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>0.540000021</X>
+						<Y>48.25</Y>
+						<Z>88.7099991</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX14">
+					<Properties>
+						<token name="Face">3</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=63638232 </url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Script" referent="RBX15">
+			<Properties>
+				<bool name="Disabled">true</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">ResetDP</string>
+				<ProtectedString name="Source">local playaz = game.Players:GetPlayers()
+
+for i = 1, #playaz do
+&#9;if playaz[i].userId == game.CreatorId then
+&#9;&#9;local modelToSave = Instance.new(&quot;Model&quot;)
+&#9;&#9;modelToSave.Name = &quot;EraseMe&quot;
+&#9;&#9;local success, error = pcall(function() playaz[i]:SaveInstance(&quot;PlaceData&quot;, modelToSave) end)
+&#9;end
+end
+
+--debug.Value = &quot;Saved data should be cleared!&quot;
+</ProtectedString>
+			</Properties>
+		</Item>
+		<Item class="LocalScript" referent="RBX16">
+			<Properties>
+				<bool name="Disabled">true</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">LevelGenerator</string>
+				<ProtectedString name="Source">-- for procedurally generating a nifty level to be as unique as possible with as little work as possible:
+
+&#9;-- call terrain generation with sand
+&#9;-- then higher terrain generation with grass
+&#9;-- then create some hills and craters
+&#9;-- then create some winding canyons with painter
+&#9;-- then create some shrubbery with trees and cacti
+&#9;-- then create some tunnels with new tunnelmaker [EXTRA CREDIT]
+
+
+--local debug = game.Workspace.Debug
+local initialSpawn = game.Workspace:FindFirstChild(&quot;InitialSpawnLocation&quot;)
+
+local newMessage = Instance.new(&quot;Hint&quot;)
+newMessage.Text = &quot;Welcome to your new personal build server!  Please configure your terrain below...&quot;
+newMessage.Parent = game.Workspace
+
+local c = game.Workspace.Terrain
+local SetCell = c.SetCell
+local GetCell = c.GetCell
+
+-------------------------------------------
+--TERRAIN GENERATION FUNCTION DEFINITIONS--
+-------------------------------------------
+
+--makes a column of blocks from 1 up to height at location (x,z) in cluster c
+function coordHeight(x, z, height, sandThresh)
+&#9;for h = 1, height do
+&#9;&#9;if h &gt;= sandThresh then SetCell(c, x, h, z, 1, 0, 0)
+&#9;&#9;else SetCell(c, x, h, z, 2, 0, 0) end
+&#9;end
+end
+
+--makes a heightmap for a layer of mountains (width x depth)
+--with a width frequency wf and depthfrequency df (width should be divisible by wf, depth should be divisible by df) (for unsquished results, width/wf = depth/df)
+--with a range of amplitudes between 0 and a
+function mountLayer(width, depth, wf, df, a)
+&#9;local heightmap = {}
+&#9;for i = 0, width-1 do
+&#9;&#9;heightmap[i] = {}
+&#9;&#9;for k = 0, depth-1 do
+&#9;&#9;&#9;heightmap[i][k] = 0
+&#9;&#9;end
+&#9;end
+&#9;math.randomseed(tick())
+&#9;local corners = {}
+&#9;for i = 0,wf do
+&#9;&#9;corners[i] = {}
+&#9;&#9;for k = 0, df do
+&#9;&#9;&#9;corners[i][k] = a*math.random()
+&#9;&#9;end
+&#9;end
+&#9;for i = 0, wf do
+&#9;&#9;corners[i][0] = 0
+&#9;&#9;corners[i][math.floor(df)] = 0
+&#9;end
+&#9;for k = 0, df do
+&#9;&#9;corners[0][k]=0
+&#9;&#9;corners[math.floor(wf)][k]=0
+&#9;end
+
+&#9;for i = 0, width-(width/wf), width/wf do
+&#9;&#9;for k = 0, depth-(depth/df), depth/df do
+&#9;&#9;&#9;local c1 = corners[i/(width/wf)][k/(depth/df)]
+&#9;&#9;&#9;local c2 = corners[i/(width/wf)][(k+depth/df)/(depth/df)]
+&#9;&#9;&#9;local c3 = corners[(i+width/wf)/(width/wf)][k/(depth/df)]
+&#9;&#9;&#9;local c4 = corners[(i+width/wf)/(width/wf)][(k+depth/df)/(depth/df)]
+&#9;&#9;&#9;for x = i, i+(width/wf)-1 do
+&#9;&#9;&#9;&#9;for z = k, k+(depth/df)-1 do
+&#9;&#9;&#9;&#9;&#9;local avgc1c3 = (math.abs(x-i)*c3 + math.abs(x-(i+width/wf))*c1)/(width/wf)
+&#9;&#9;&#9;&#9;&#9;local avgc2c4 = (math.abs(x-i)*c4 + math.abs(x-(i+width/wf))*c2)/(width/wf)
+&#9;&#9;&#9;&#9;&#9;local avg = math.floor((math.abs(z-k)*avgc2c4 + math.abs(z-(k+depth/df))*avgc1c3)/(depth/df))
+&#9;&#9;&#9;&#9;&#9;if (avg &gt; c.MaxExtents.Max.Y) then
+--&#9;&#9;&#9;&#9;&#9;&#9;print(avg)
+&#9;&#9;&#9;&#9;&#9;&#9;avg = c.MaxExtents.Max.Y
+&#9;&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;&#9;heightmap[x][z]= avg
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;&#9;wait()
+&#9;end
+&#9;return heightmap
+end
+
+--makes a shell around block at coordinate x, z using heightmap
+function makeShell(x, z, heightmap, shellheightmap)
+&#9;local originalheight = heightmap[x][z]
+&#9;local originalMaterial = GetCell(c, x, originalheight, z).Value
+&#9;for i = x - 1, x + 1 do
+&#9;&#9;for k = z - 1, z + 1 do
+&#9;&#9;&#9;if shellheightmap[i][k] &lt; originalheight then
+&#9;&#9;&#9;&#9;for h = originalheight, shellheightmap[i][k] - 2, -1 do
+&#9;&#9;&#9;&#9;&#9;if h &gt; 0 then
+&#9;&#9;&#9;&#9;&#9;&#9;SetCell(c, i, h, k, originalMaterial, 0, 0)
+&#9;&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;shellheightmap[i][k] = originalheight
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;end
+&#9;return shellheightmap
+end
+
+local width = 512
+local length = 512
+--local a = AMPLITUDE
+--local f = FREQUENCY
+
+-- extra &quot;hole-filling algorithm, to keep baseplate contiguous&quot;
+function fillHoles(heightmap, holemap, width, length, xpos2, zpos2)
+&#9;for i = 1, #holemap do
+&#9;&#9;x = holemap[i].X
+&#9;&#9;z = holemap[i].Y
+&#9;&#9;&#9;
+&#9;&#9;xdir = 1
+&#9;&#9;zdir = 1
+&#9;&#9;xend = width-1
+&#9;&#9;zend = length-1
+&#9;&#9;if x &lt; (width/2) then xdir = -1 xend = 0 end
+&#9;&#9;if z &lt; (length/2) then zdir = -1 zend = 0 end
+&#9;&#9;xHit = false
+&#9;&#9;zHit = false
+&#9;&#9;for xCheck = x, xend, xdir do
+&#9;&#9;&#9;if heightmap[xCheck + xpos2][z + zpos2] &gt;= 1 then
+&#9;&#9;&#9;&#9;xHit = true
+&#9;&#9;&#9;&#9;break
+&#9;&#9;&#9;end
+&#9;&#9;end
+
+&#9;&#9;for zCheck = z, zend, zdir do
+&#9;&#9;&#9;if heightmap[x + xpos2][zCheck + zpos2] &gt;= 1 then
+&#9;&#9;&#9;&#9;zHit = true
+&#9;&#9;&#9;&#9;break
+&#9;&#9;&#9;end
+&#9;&#9;end
+
+&#9;&#9;-- if rays along both x and z axes towards outer edges hit, then we fill the hole
+&#9;&#9;if xHit and zHit then heightmap[x + xpos2][z + zpos2] = 1 end
+&#9;end
+end
+
+
+function generateTerrain(a, f, sandFrac)
+&#9;newMessage.Text = &quot;Welcome to your new personal build server!  Making terrain calculations&quot;
+
+&#9;local xpos2 = c.MaxExtents.Min.X
+&#9;local zpos2 = c.MaxExtents.Min.Z
+&#9;--make 3 layers of mountains (you can change the frequency and amplitude of each layer and add or remove layers as you see fit (but don&apos;t forget to add the new layers to the loop below)
+&#9;a1 = mountLayer(width, length, f*width/512, f*length/512, 3/5*a)
+&#9;newMessage.Text = newMessage.Text .. &quot;.&quot;
+&#9;a2 = mountLayer(width, length, 2*f*width/512, 2*f*length/512, 2/5*a)
+&#9;newMessage.Text = newMessage.Text .. &quot;.&quot;
+&#9;test = mountLayer(width, length, f*width/512, f*length/512, sandFrac*a)
+&#9;newMessage.Text = newMessage.Text .. &quot;.&quot;
+
+&#9;heightmap = {}
+&#9;holemap = {} -- for keeping track of holes to fill in later if necessary
+&#9;for x = 0, width - 1 do
+&#9;&#9;heightmap[x + xpos2] = {}
+&#9;&#9;for z = 0, length - 1 do
+&#9;&#9;&#9;heightmap[x + xpos2][z + zpos2] = a1[x][z] + a2[x][z]
+&#9;&#9;&#9;if heightmap[x + xpos2][z + zpos2] &lt; 1 then table.insert(holemap, Vector2.new(x, z)) end
+&#9;&#9;end
+&#9;end
+
+&#9;fillHoles(heightmap, holemap, width, length, xpos2, zpos2)
+
+&#9;shellheightmap = {}
+&#9;for x = 0, width - 1 do
+&#9;&#9;shellheightmap[x + xpos2] = {}
+&#9;&#9;for z = 0, length - 1 do
+&#9;&#9;&#9;shellheightmap[x + xpos2][z + zpos2] = heightmap[x + xpos2][z + zpos2]
+&#9;&#9;end
+&#9;end
+&#9;--gprogress = 0
+&#9;--gloadstatus.Text = &quot;Generating Terrain Shape...&quot;
+
+&#9;newMessage.Text = &quot;Welcome to your new personal build server!  Generating terrain&quot;
+&#9;local count = 0
+&#9;local waitCount = 0
+&#9;k = 1 + zpos2
+&#9;while k &lt; length - 1 + zpos2 do
+&#9;&#9;for x = 1 + xpos2, width - 2 + xpos2 do
+&#9;&#9;&#9;coordHeight(x, k, heightmap[x][k], math.max(test[x-xpos2][k-zpos2], sandFrac * 4))
+&#9;&#9;&#9;shellheightmap = makeShell(x, k, heightmap, shellheightmap)
+&#9;&#9;end
+&#9;&#9;k = k + 1
+&#9;&#9;count = count + 1
+&#9;&#9;if waitCount &gt; 5 then waitCount = 0 wait() else waitCount = waitCount + 1 end
+&#9;&#9;if count &gt;= 100 then count = 0 newMessage.Text = newMessage.Text .. &quot;.&quot; end
+&#9;&#9;--gprogress = gprogress + 2/(length * 3)
+&#9;&#9;--gfill.Size = UDim2.new(gprogress, 0, 1, 0)
+&#9;end
+&#9;--gloadstatus.Text = &quot;Smoothing Terrain...&quot;
+&#9;newMessage.Text = &quot;Welcome to your new personal build server!  Smoothing terrain...&quot;
+&#9;wait()
+&#9;game.Workspace.Terrain:AutowedgeCells(Region3int16.new(Vector3int16.new(-255, 0, -255), Vector3int16.new(255, 63, 255)))
+end
+
+--debug.Value = &quot;Loaded the level generator script...  generating terrain now&quot;
+
+--generateTerrain(30, 8, 4/5)
+
+-- first parameter goes from 10 to 50
+-- second parameter goes from 8 to 64 by powers of 2 (so 8, 16, 32, 64)
+-- third parameter goes from 0 to 1 with focus on 1 when it&apos;s &lt; .5; otherwise, it goes from 1 to 16 along a quintic
+local flatness = .5  -- flat vs. hilly [from 0 to 1]
+local bumpiness = 0 -- smooth vs. bumpy [0, 1, 2, 3]
+local sandiness = .5  -- sand vs grass [from 0 to 1]
+
+--screengui start
+g = Instance.new(&quot;ScreenGui&quot;, script.Parent.Parent.PlayerGui)
+local frame = Instance.new(&quot;Frame&quot;, g)
+
+function makeTerrain()
+&#9;if frame then frame.Visible = false frame:Remove() end
+
+&#9;local newA = (1-flatness)*50 + 10
+&#9;local newF = 2^(bumpiness+3)
+
+&#9;local newSandFrac = (sandiness*2 - 1)*(sandiness*2 - 1)
+&#9;if sandiness &gt; .5 then newSandFrac = 1 + (sandiness-.5)*(sandiness-.5)*(sandiness-.5)*(sandiness-.5)*(sandiness-.5)*32*15
+&#9;else newSandFrac = 1 - newSandFrac end
+
+&#9;generateTerrain(newA, newF, newSandFrac)
+
+&#9;--debug.Value = &quot;Finished generating the terrain!&quot;
+
+&#9;if initialSpawn then initialSpawn.Parent = game.Lighting end
+&#9;newMessage.Parent = nil
+
+&#9;script.Parent.Parent.Character.Parent = game.Workspace
+&#9;script:Remove()
+end
+
+
+
+------
+--GUI-
+------
+
+--load library for with sliders
+local RbxGui = LoadLibrary(&quot;RbxGui&quot;)
+
+--frame
+frame.Size = UDim2.new(0.8, 0, 0.5, 0)
+frame.Position = UDim2.new(0.1, 0, 0.25, 0)
+frame.BackgroundTransparency = 0.5
+frame.Visible = true
+
+--title
+title = Instance.new(&quot;TextLabel&quot;, frame)
+title.Position = UDim2.new(0.4, 0, 0.05, 0)
+title.Size = UDim2.new(0.2, 0, 0.05, 0)
+title.Text = &quot;Make Your Terrain!&quot;
+title.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.ArialBold
+title.FontSize = Enum.FontSize.Size24
+title.BorderColor3 = Color3.new(0, 0, 0)
+title.BackgroundTransparency = 1
+
+--current length display label
+lengthl = Instance.new(&quot;TextLabel&quot;, frame)
+lengthl.Position = UDim2.new(0.05, 0, 0.2, 0)
+lengthl.Size = UDim2.new(0.1, 0, 0.05, 0)
+lengthl.Text = &quot;Sandiness: &quot;..(sandiness*100)..&quot;% (mixed)&quot;
+lengthl.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+lengthl.TextColor3 = Color3.new(1, 1, 1)
+lengthl.Font = Enum.Font.ArialBold
+lengthl.FontSize = Enum.FontSize.Size14
+lengthl.BorderColor3 = Color3.new(0, 0, 0)
+lengthl.BackgroundTransparency = 1
+
+--length slider
+lengthSliderGui, lengthSliderPosition = RbxGui.CreateSlider(101, 0, UDim2.new(0.2, 0, 0.22, 0))
+lengthSliderGui.Parent = frame
+lengthbar = lengthSliderGui:FindFirstChild(&quot;Bar&quot;)
+lengthbar.Size = UDim2.new(0.75, 0, 0, 5)
+lengthSliderPosition.Value = sandiness*100
+lengthSliderPosition.Changed:connect(function()
+&#9;sandiness = (lengthSliderPosition.Value-1) / 100
+&#9;local descriptorString = &quot;% (mixed)&quot;
+&#9;if sandiness &lt; .3 then descriptorString = &quot;% (grassy)&quot;
+&#9;elseif sandiness &gt; .7 then descriptorString = &quot;% (sandy)&quot; end
+&#9;lengthl.Text = &quot;Sandiness: &quot;..(sandiness*100)..descriptorString
+end)
+
+--current amplitude display label
+ampl = Instance.new(&quot;TextLabel&quot;, frame)
+ampl.Position = UDim2.new(0.05, 0, 0.4, 0)
+ampl.Size = UDim2.new(0.1, 0, 0.05, 0)
+ampl.Text = &quot;Flatness: &quot;..(flatness*100)..&quot;% (average)&quot;
+ampl.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+ampl.TextColor3 = Color3.new(1, 1, 1)
+ampl.Font = Enum.Font.ArialBold
+ampl.FontSize = Enum.FontSize.Size14
+ampl.BorderColor3 = Color3.new(0, 0, 0)
+ampl.BackgroundTransparency = 1
+
+--amplitude slider
+ampSliderGui, ampSliderPosition = RbxGui.CreateSlider(101, 0, UDim2.new(0.2, 0, 0.42, 0))
+ampSliderGui.Parent = frame
+ampbar = ampSliderGui:FindFirstChild(&quot;Bar&quot;)
+ampbar.Size = UDim2.new(0.75, 0, 0, 5)
+ampSliderPosition.Value = flatness*100
+ampSliderPosition.Changed:connect(function()
+&#9;flatness = (ampSliderPosition.Value-1)/100
+&#9;local descriptorString = &quot;% (average)&quot;
+&#9;if flatness &lt; .25 then descriptorString = &quot;% (hilly)&quot;
+&#9;elseif flatness &gt; .75 then descriptorString = &quot;% (flat)&quot; end
+&#9;ampl.Text = &quot;Flatness: &quot;..(flatness*100)..descriptorString
+end)
+
+--current frequency display label
+freql = Instance.new(&quot;TextLabel&quot;, frame)
+freql.Position = UDim2.new(0.05, 0, 0.6, 0)
+freql.Size = UDim2.new(0.1, 0, 0.05, 0)
+freql.Text = &quot;Bumpiness: &quot;..bumpiness..&quot; (smooth)&quot;
+freql.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+freql.TextColor3 = Color3.new(1, 1, 1)
+freql.Font = Enum.Font.ArialBold
+freql.FontSize = Enum.FontSize.Size14
+freql.BorderColor3 = Color3.new(0, 0, 0)
+freql.BackgroundTransparency = 1
+
+--frequency slider
+freqSliderGui, freqSliderPosition = RbxGui.CreateSlider(4, 0, UDim2.new(0.2, 0, 0.62, 0))
+freqSliderGui.Parent = frame
+freqbar = freqSliderGui:FindFirstChild(&quot;Bar&quot;)
+freqbar.Size = UDim2.new(0.75, 0, 0, 5)
+freqSliderPosition.Value = bumpiness
+freqSliderPosition.Changed:connect(function()
+&#9;bumpiness = freqSliderPosition.Value-1
+&#9;local descriptorString = &quot; (average)&quot;
+&#9;if bumpiness == 0 then descriptorString = &quot; (smooth)&quot;
+&#9;elseif bumpiness &gt; 1 then descriptorString = &quot; (rough)&quot; end
+&#9;freql.Text = &quot;Bumpiness: &quot;..bumpiness..descriptorString
+end)
+
+--generate button
+generate = Instance.new(&quot;TextButton&quot;, frame)
+generate.Position = UDim2.new(0.4, 0, 0.85, 0)
+generate.Size = UDim2.new(0.2, 0, 0.1, 0)
+generate.Text = &quot;Make terrain!&quot;
+generate.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+generate.TextColor3 = Color3.new(1, 1, 1)
+generate.Font = Enum.Font.ArialBold
+generate.FontSize = Enum.FontSize.Size14
+generate.BorderColor3 = Color3.new(0, 0, 0)
+generate.BackgroundTransparency = 0.5
+generate.MouseEnter:connect(function()
+&#9;generate.BorderColor3 = Color3.new(1, 1, 1)
+&#9;generate.BackgroundColor3 = Color3.new(0, 0, 0)
+&#9;generate.BackgroundTransparency = 0.2
+end)
+generate.MouseButton1Click:connect(makeTerrain)
+generate.MouseLeave:connect(function()
+&#9;generate.BorderColor3 = Color3.new(0, 0, 0)
+&#9;generate.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;generate.BackgroundTransparency = 0.5
+end)
+
+</ProtectedString>
+			</Properties>
+		</Item>
+		<Item class="LocalScript" referent="RBX17">
+			<Properties>
+				<bool name="Disabled">true</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">ResetButtonScript</string>
+				<ProtectedString name="Source">local saveTable = {JoinScript = true, 
+&#9;&#9;&#9;&#9;&#9;&#9; LevelGenerator = true, 
+&#9;&#9;&#9;&#9;&#9;&#9; ResetButtonScript = true,
+&#9;&#9;&#9;&#9;&#9;&#9; Camera = true,
+&#9;&#9;&#9;&#9;&#9;&#9; Message = true,
+&#9;&#9;&#9;&#9;&#9;&#9; Terrain = true,
+&#9;&#9;&#9;&#9;&#9;&#9; InitialSpawnLocation = true}
+
+local g = nil -- handle to reset gui
+
+-- call level generator script
+local debounceNewLevel = false
+function makeNewLevel()
+&#9;if debounceNewLevel then return else debounceNewLevel = true end
+&#9;
+&#9;local newMessage = Instance.new(&quot;Hint&quot;)
+&#9;newMessage.Text = &quot;Clearing your personal build server&quot;
+&#9;newMessage.Parent = game.Workspace
+
+&#9;-- first make my char disappear
+&#9;local myChar = script.Parent.Parent.Character
+&#9;myChar.Parent = nil
+
+&#9;-- clear the workspace of non-characters
+&#9;local gameChildren = game.Workspace:GetChildren()
+&#9;for i = 1, #gameChildren do
+&#9;&#9;if not gameChildren[i]:FindFirstChild(&quot;Humanoid&quot;) and (not saveTable[gameChildren[i].Name]) then
+&#9;&#9;&#9;gameChildren[i]:Remove()
+&#9;&#9;end
+&#9;end
+
+&#9;-- and the terrain
+&#9;local c = game.Workspace.Terrain
+&#9;local SetCell = c.SetCell
+&#9;local xMax = c.MaxExtents.Max.X
+&#9;local yMax = c.MaxExtents.Max.Y
+&#9;local zMax = c.MaxExtents.Max.Z
+
+&#9;local xMin = c.MaxExtents.Min.X
+&#9;local yMin = c.MaxExtents.Min.Y
+&#9;local zMin = c.MaxExtents.Min.Z
+
+&#9;local waitCount = 0
+&#9;local clearedCount = 0
+
+&#9;for z = zMin, zMax do
+&#9;&#9;for y = yMin, yMax do
+&#9;&#9;&#9;for x = xMin, xMax do
+&#9;&#9;&#9;&#9;SetCell(c, x, y, z, 0, 0, 0)
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;
+&#9;&#9;if clearedCount &gt; 100 then clearedCount = 0 newMessage.Text = newMessage.Text .. &quot;.&quot; else clearedCount = clearedCount + 1 end
+&#9;&#9;if waitCount &gt; 5 then waitCount = 0 wait() else waitCount = waitCount + 1 end
+&#9;end
+
+
+&#9;-- bring back the initial spawn location
+&#9;local initSpawn = game.Lighting:FindFirstChild(&quot;InitialSpawnLocation&quot;)
+&#9;if initSpawn then initSpawn.Parent = game.Workspace end
+&#9;
+&#9;-- and kill all the players&apos; characters here
+&#9;local gp = game.Players:GetPlayers()
+&#9;for i = 1, #gp do
+&#9;&#9;local gChar = gp[i].Character
+&#9;&#9;if gChar then gChar:BreakJoints() end
+&#9;end
+
+&#9;newMessage:Remove()
+
+&#9;local newLevelGenScript = game.Workspace.LevelGenerator:Clone()
+&#9;newLevelGenScript.Parent = script.Parent
+&#9;newLevelGenScript.Disabled = false
+
+&#9;g:Remove()
+&#9;script:Remove()
+end
+
+local debounceConfirm = false
+function confirmBox()
+&#9;if debounceConfirm then return else debounceConfirm = true end
+&#9;local boxFrame = Instance.new(&quot;Frame&quot;, g)
+&#9;
+&#9;--frame
+&#9;boxFrame.Size = UDim2.new(0.8, 0, 0.3, 0)
+&#9;boxFrame.Position = UDim2.new(0.1, 0, 0.35, 0)
+&#9;boxFrame.BackgroundTransparency = 0.5
+&#9;boxFrame.Visible = true
+
+&#9;--title
+&#9;title = Instance.new(&quot;TextLabel&quot;, boxFrame)
+&#9;title.Position = UDim2.new(0.3, 0, 0.15, 0)
+&#9;title.Size = UDim2.new(0.4, 0, 0.05, 0)
+&#9;title.Text = &quot;Do you really want to reset everything?&quot;
+&#9;title.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+&#9;title.TextColor3 = Color3.new(1, 1, 1)
+&#9;title.Font = Enum.Font.ArialBold
+&#9;title.FontSize = Enum.FontSize.Size36
+&#9;title.BorderColor3 = Color3.new(0, 0, 0)
+&#9;title.BackgroundTransparency = 1
+
+&#9;--generate button
+&#9;generate = Instance.new(&quot;TextButton&quot;, boxFrame)
+&#9;generate.Position = UDim2.new(0.075, 0, 0.65, 0)
+&#9;generate.Size = UDim2.new(0.35, 0, 0.2, 0)
+&#9;generate.Text = &quot;CANCEL&quot;
+&#9;generate.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;generate.TextColor3 = Color3.new(1, 1, 1)
+&#9;generate.Font = Enum.Font.ArialBold
+&#9;generate.FontSize = Enum.FontSize.Size14
+&#9;generate.BorderColor3 = Color3.new(0, 0, 0)
+&#9;generate.BackgroundTransparency = 0.5
+&#9;generate.MouseEnter:connect(function()
+&#9;&#9;generate.BorderColor3 = Color3.new(1, 1, 1)
+&#9;&#9;generate.BackgroundColor3 = Color3.new(0, 0, 0)
+&#9;&#9;generate.BackgroundTransparency = 0.2
+&#9;end)
+&#9;generate.MouseButton1Click:connect(function() boxFrame:Remove() debounceConfirm = false end)
+&#9;generate.MouseLeave:connect(function()
+&#9;&#9;generate.BorderColor3 = Color3.new(0, 0, 0)
+&#9;&#9;generate.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;&#9;generate.BackgroundTransparency = 0.5
+&#9;end)
+
+&#9;--resetServer button
+&#9;resetServer = Instance.new(&quot;TextButton&quot;, boxFrame)
+&#9;resetServer.Position = UDim2.new(0.575, 0, 0.65, 0)
+&#9;resetServer.Size = UDim2.new(0.35, 0, 0.2, 0)
+&#9;resetServer.Text = &quot;RESET&quot;
+&#9;resetServer.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;resetServer.TextColor3 = Color3.new(1, 1, 1)
+&#9;resetServer.Font = Enum.Font.ArialBold
+&#9;resetServer.FontSize = Enum.FontSize.Size14
+&#9;resetServer.BorderColor3 = Color3.new(0, 0, 0)
+&#9;resetServer.BackgroundTransparency = 0.5
+&#9;resetServer.MouseEnter:connect(function()
+&#9;&#9;resetServer.BorderColor3 = Color3.new(1, 1, 1)
+&#9;&#9;resetServer.BackgroundColor3 = Color3.new(0, 0, 0)
+&#9;&#9;resetServer.BackgroundTransparency = 0.2
+&#9;end)
+&#9;resetServer.MouseButton1Click:connect(function() boxFrame:Remove() makeNewLevel() end)
+&#9;resetServer.MouseLeave:connect(function()
+&#9;&#9;resetServer.BorderColor3 = Color3.new(0, 0, 0)
+&#9;&#9;resetServer.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;&#9;resetServer.BackgroundTransparency = 0.5
+&#9;end)
+end
+
+
+--load library for with sliders
+local RbxGui = LoadLibrary(&quot;RbxGui&quot;)
+
+--screengui start
+g = Instance.new(&quot;ScreenGui&quot;, script.Parent.Parent.PlayerGui)
+local frame = Instance.new(&quot;Frame&quot;, g)
+
+--frame
+frame.Size = UDim2.new(0.05, 0, 0.05, 0)
+frame.Position = UDim2.new(0.1, 0, 0.95, 0)
+frame.BackgroundTransparency = 0.5
+frame.Visible = true
+
+reset = Instance.new(&quot;TextButton&quot;, frame)
+reset.Position = UDim2.new(0.1, 0, 0.1, 0)
+reset.Size = UDim2.new(0.8, 0, 0.8, 0)
+reset.Text = &quot;RESET ALL&quot;
+reset.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+reset.TextColor3 = Color3.new(1, 1, 1)
+reset.Font = Enum.Font.ArialBold
+reset.FontSize = Enum.FontSize.Size10
+reset.BorderColor3 = Color3.new(0, 0, 0)
+reset.BackgroundTransparency = 0.5
+reset.MouseEnter:connect(function()
+&#9;reset.BorderColor3 = Color3.new(1, 1, 1)
+&#9;reset.BackgroundColor3 = Color3.new(0, 0, 0)
+&#9;reset.BackgroundTransparency = 0.2
+end)
+reset.MouseButton1Click:connect(confirmBox)
+reset.MouseLeave:connect(function()
+&#9;reset.BorderColor3 = Color3.new(0, 0, 0)
+&#9;reset.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+&#9;reset.BackgroundTransparency = 0.5
+end)
+</ProtectedString>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="StarterPack" referent="RBX18">
+		<Properties>
+			<string name="Name">StarterPack</string>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBX19">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX20">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX21">
+		<Properties>
+			<string name="Name">CollectionService</string>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBX22">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX23">
+		<Properties>
+			<string name="Name">BadgeService</string>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX24">
+		<Properties>
+			<string name="Name">Geometry</string>
+		</Properties>
+	</Item>
+	<Item class="RenderHooksService" referent="RBX25">
+		<Properties>
+			<string name="Name">RenderHooksService</string>
+		</Properties>
+	</Item>
+	<Item class="SocialService" referent="RBX26">
+		<Properties>
+			<string name="Name">SocialService</string>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX27">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+		</Properties>
+	</Item>
+	<Item class="TimerService" referent="RBX28">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX29">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBX30">
+		<Properties>
+			<string name="Name">CookiesService</string>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX31">
+		<Properties>
+			<string name="Name">Teleport Service</string>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX32">
+		<Properties>
+			<string name="Name">Players</string>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX33">
+		<Properties>
+			<string name="Name">Selection</string>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX34">
+		<Properties>
+			<Color3 name="Ambient">4286611584</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<Color3 name="FogColor">4290822336</Color3>
+			<float name="FogEnd">100000</float>
+			<float name="FogStart">0</float>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4289967032</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+		</Properties>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX35">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+		</Properties>
+	</Item>
+</roblox>
