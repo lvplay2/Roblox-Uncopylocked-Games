@@ -5,6 +5,8 @@ All these different files come from different places from YouTube, Roblox, Disco
 # NOTICE
 Some games need to be published in order to work properly. Remember to do that if the game doesn't seem to work in Roblox Studio.
 
+Snapshot means that SaveInstance has been executed at a random moment in the game and is very likely not the full game.
+
 # Executors that I recommend in case you want to do it yourself
 | Executor | Level | UNC | sUNC |
 | ------- | ------ | ---- | ---- |
