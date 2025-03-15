@@ -2,7 +2,7 @@
 name: Game request
 about: Suggest a game for this project
 title: Game request (game's name here)
-labels: ''
+labels: game request
 assignees: ''
 
 ---
