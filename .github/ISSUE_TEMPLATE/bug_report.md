@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a bug report about an uncopylocked game
 title: Bug report (game's name here)
-labels: bug
+labels: bug, question
 assignees: ''
 
 ---
