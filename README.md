@@ -1,5 +1,5 @@
 # Roblox uncopylocked games
-A repository with more than 400 popular Roblox games with their source code.
+A repository with more than 600 popular Roblox games with their source code.
 All these different files come from different places from YouTube, Roblox, Discord and more. Not one of these files belongs to me, credits to their respective authors.
 
 # NOTICE
