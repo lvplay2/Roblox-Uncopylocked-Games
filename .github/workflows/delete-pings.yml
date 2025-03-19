@@ -1,0 +1,30 @@
+name: Delete Ping Comments
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  check-and-delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check comment for direct pings
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const comment = context.payload.comment;
+            const issue_number = context.payload.issue.number;
+            const repo = context.repo;
+
+            const mentionRegex = /@\w+/g;
+
+            if (mentionRegex.test(comment.body)) {
+              console.log(`Eliminando comentario con mención: ${comment.body}`);
+
+              await github.rest.issues.deleteComment({
+                owner: repo.owner,
+                repo: repo.repo,
+                comment_id: comment.id
+              });
+            }
