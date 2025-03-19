@@ -20,7 +20,7 @@ jobs:
             const mentionRegex = /@\w+/g;
 
             if (mentionRegex.test(comment.body)) {
-              console.log(`Eliminando comentario con mención: ${comment.body}`);
+              console.log(`Deleting comment with ping: ${comment.body}`);
 
               await github.rest.issues.deleteComment({
                 owner: repo.owner,
