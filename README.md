@@ -10,6 +10,7 @@ Snapshot means that SaveInstance has been executed at a random moment in the gam
 # Executors that I recommend in case you want to do it yourself
 | Executor | Level | UNC | sUNC |
 | ------- | ------ | ---- | ---- |
+| [Swift](https://getswift.gg/) | 8 | 100% | 98% |
 | [Xeno](https://xeno.now) | 3 | 81% | 41% |
 | [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | 3 | 66% | 52% |
 | [JJSploit](https://wearedevs.net/d/JJSploit) | 3 | ? | 40% |
