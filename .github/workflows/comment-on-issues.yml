@@ -1,0 +1,32 @@
+name: Comment on Issues
+
+on:
+  workflow_dispatch:  
+
+jobs:
+  comment-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get open issues
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open'
+            });
+
+            for (const issue of issues) {
+              // Solo issues, no pull requests
+              if (!issue.pull_request) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: 'I have read it, in progress...'
+                });
+              }
+            }
