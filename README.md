@@ -14,3 +14,6 @@ Snapshot means that SaveInstance has been executed at a random moment in the gam
 | [Xeno](https://xeno.now) | 3 | 81% | 41% |
 | [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | 3 | 66% | 52% |
 | [JJSploit](https://wearedevs.net/d/JJSploit) | 3 | ? | 40% |
+
+# DMCA
+If you own the rights to a game and would like us to remove it, please send us an issue. We take these requests very seriously and will act immediately.
