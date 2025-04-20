@@ -1,6 +1,6 @@
 > If you own the rights to a game and would like us to remove it, please send us an [issue](https://github.com/lvplay2/Roblox-Uncopylocked-Games/issues/new?template=takedown-request.md). We take these requests very seriously and will act immediately.
 # Roblox uncopylocked games
-A repository with more than 600 popular Roblox games with their source code.
+A repository with more than 700 popular Roblox games with their source code.
 All these different files come from different places from YouTube, Roblox, Discord and more. Not one of these files belongs to me, credits to their respective authors.
 
 # NOTICE
