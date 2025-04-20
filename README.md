@@ -1,3 +1,4 @@
+> If you own the rights to a game and would like us to remove it, please send us an [issue](https://github.com/lvplay2/Roblox-Uncopylocked-Games/issues/new?template=takedown-request.md). We take these requests very seriously and will act immediately.
 # Roblox uncopylocked games
 A repository with more than 600 popular Roblox games with their source code.
 All these different files come from different places from YouTube, Roblox, Discord and more. Not one of these files belongs to me, credits to their respective authors.
@@ -14,6 +15,3 @@ Snapshot means that SaveInstance has been executed at a random moment in the gam
 | [Xeno](https://xeno.now) | 3 | 81% | 41% |
 | [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | 3 | 66% | 52% |
 | [JJSploit](https://wearedevs.net/d/JJSploit) | 3 | ? | 40% |
-
-# DMCA
-If you own the rights to a game and would like us to remove it, please send us an [issue](https://github.com/lvplay2/Roblox-Uncopylocked-Games/issues/new?template=takedown-request.md). We take these requests very seriously and will act immediately.
