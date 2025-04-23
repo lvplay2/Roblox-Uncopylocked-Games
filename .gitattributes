@@ -3,3 +3,5 @@
 Kaiju[[:space:]]Paradise.rbxlx filter=lfs diff=lfs merge=lfs -text
 Evade[[:space:]](Snapshot,[[:space:]]Broken).rbxlx filter=lfs diff=lfs merge=lfs -text
 Combat[[:space:]]Initiation[[:space:]](Glass[[:space:]]Houses).rbxlx filter=lfs diff=lfs merge=lfs -text
+Arsenal[[:space:]](A[[:space:]]random[[:space:]]map).rbxlx filter=lfs diff=lfs merge=lfs -text
+Anomic.rbxlx filter=lfs diff=lfs merge=lfs -text
