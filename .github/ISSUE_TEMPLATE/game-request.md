@@ -9,6 +9,8 @@ assignees: ''
 
 **Game's name:** [game's name here]
 
+**Developer:** [game's developer here]
+
 **The game has multiple maps:** [yes / no]
 
 **You tried to use SaveInstance for this game before creating this issue:** [yes / no]
