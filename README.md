@@ -9,9 +9,9 @@ Some games need to be published in order to work properly. Remember to do that i
 Snapshot means that SaveInstance has been executed at a random moment in the game and is very likely not the full game.
 
 # Executors that I recommend in case you want to do it yourself
-| Executor | Level | UNC | sUNC |
+| Executor | Key System | Level | UNC | sUNC |
 | ------- | ------ | ---- | ---- |
-| [Swift](https://getswift.gg/) | 8 | 100% | 98% |
-| [Xeno](https://xeno.now) | 3 | 81% | 41% |
-| [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | 3 | 66% | 52% |
-| [JJSploit](https://wearedevs.net/d/JJSploit) | 3 | ? | 40% |
+| [Swift](https://getswift.gg/) | Yes | 8 | 100% | 98% |
+| [Xeno](https://xeno.now) | No | 3 | 81% | 41% |
+| [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | No | 3 | 66% | 52% |
+| [JJSploit](https://wearedevs.net/d/JJSploit) | Yes | 3 | ? | 40% |
