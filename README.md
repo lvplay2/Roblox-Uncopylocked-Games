@@ -13,5 +13,5 @@ Snapshot means that SaveInstance has been executed at a random moment in the gam
 | ------- | ---- | ------ | ---- | ---- |
 | [Swift](https://getswift.gg/) | Yes | 8 | 100% | 98% |
 | [Xeno](https://xeno.now) | No | 3 | 81% | 41% |
-| [Solara](https://60aaf9c6.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | No | 3 | 66% | 52% |
+| [Solara](https://f572bf87.salamanderprocessing.pages.dev/download/static/files/BootstrapperNew.exe) | No | 3 | 66% | 52% |
 | [JJSploit](https://wearedevs.net/d/JJSploit) | Yes | 3 | ? | 40% |
