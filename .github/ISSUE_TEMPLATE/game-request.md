@@ -19,7 +19,7 @@ assignees: ''
 
 ## Settings
 
-**Decompile (Localscripts):** [yes / no] -- Default: true
+**Decompile (Local and Module scripts):** [yes / no] -- Default: true
 
 **SaveBytecode:** [yes / no] -- Includes bytecode in the output. Useful if you wish to be able to decompile it yourself later. Default: true
 
