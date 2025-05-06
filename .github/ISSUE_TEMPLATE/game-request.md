@@ -13,7 +13,7 @@ assignees: ''
 
 **Developer:** [game's developer here]
 
-**The game has multiple maps:** [yes / no]
+**Which maps do you want to be saved:** [maps here]
 
 **You tried to use SaveInstance for this game before creating this issue:** [yes / no]
 
